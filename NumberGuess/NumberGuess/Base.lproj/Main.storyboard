@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xxy-b3-mvy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZ3-Hv-dyj">
-                                <rect key="frame" x="149" y="820" width="116" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZ3-Hv-dyj">
+                                <rect key="frame" x="142" y="596" width="116" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="Click here"/>
                                 <connections>
@@ -38,6 +38,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHU-1B-HiS">
+                                <rect key="frame" x="184" y="832" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="1uf-Jn-r3R"/>
+                                    <constraint firstAttribute="height" constant="30" id="neP-AK-2Bj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -46,11 +54,14 @@
                             <constraint firstItem="mZ3-Hv-dyj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Rp-Ed-SXT"/>
                             <constraint firstItem="20r-nB-gxG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Iz-18-u5V"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="20r-nB-gxG" secondAttribute="trailing" constant="20" id="Bs0-Mg-zwZ"/>
+                            <constraint firstItem="BHU-1B-HiS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NCf-cf-RwD"/>
                             <constraint firstItem="20r-nB-gxG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZkP-mk-DbT"/>
                             <constraint firstItem="NMX-02-1Ij" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jjt-4b-VFW"/>
                             <constraint firstItem="mZ3-Hv-dyj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oFv-X2-dtQ"/>
+                            <constraint firstItem="BHU-1B-HiS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yIU-ag-N1R"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="U7o-Ho-Yob"/>
                     <connections>
                         <outlet property="numberLabel" destination="NMX-02-1Ij" id="7mo-i6-OWW"/>
                         <outlet property="textField" destination="20r-nB-gxG" id="uzi-Eo-4pW"/>
@@ -59,6 +70,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nPn-cl-Dpr">
+            <objects>
+                <navigationController id="Xxy-b3-mvy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P4o-uD-7EJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pxz-j0-8IK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3uM-Sj-ANr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-583" y="94"/>
         </scene>
     </scenes>
     <resources>
