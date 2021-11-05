@@ -29,12 +29,13 @@ class ViewController: UIViewController {
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         model.numberToGuess = Int.random(in: 0..<100)
         print("Number to guess: \(model.numberToGuess)")
         // Do any additional setup after loading the view.
     }
+    
+  
 }
 
